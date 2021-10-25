@@ -8,8 +8,9 @@ public class Account {
 	
 	@Id
 	private String id;
+	private String personId;
 	private String accountType;
-	private String accountName;
+	private String accountNumber;
 	private String currency;
 	private float initialSAmount;
 	private float currentAmount;
@@ -21,17 +22,24 @@ public class Account {
 	public void setId(String id) {
 		this.id = id;
 	}
+	
+	public String getPersonId() {
+		return personId;
+	}
+	public void setPersonId(String personId) {
+		this.personId = personId;
+	}
 	public String getAccountType() {
 		return accountType;
 	}
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
-	public String getAccountName() {
-		return accountName;
+	public String getAccountNumber() {
+		return accountNumber;
 	}
-	public void setAccountName(String accountName) {
-		this.accountName = accountName;
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 	public String getCurrency() {
 		return currency;
@@ -57,25 +65,26 @@ public class Account {
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
 	}
-	public Account(String id, String accountType, String accountName, String currency, float initialSAmount,
-			float currentAmount, boolean isActive) {
+	public Account(String id, String personId, String accountType, String accountNumber, String currency,
+			float initialSAmount, float currentAmount, boolean isActive) {
 		super();
 		this.id = id;
+		this.personId = personId;
 		this.accountType = accountType;
-		this.accountName = accountName;
+		this.accountNumber = accountNumber;
 		this.currency = currency;
-		this.initialSAmount = 0.0f;
+		this.initialSAmount = initialSAmount;
 		this.currentAmount = currentAmount;
 		this.isActive = isActive;
 	}
-	
 	public Account() {
 		super();
 	}
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", accountType=" + accountType + ", accountName=" + accountName + ", currency="
-				+ currency + ", initialSAmount=" + initialSAmount + ", currentAmount=" + currentAmount + ", isActive="
-				+ isActive + "]";
-	}	
+		return "Account [id=" + id + ", personId=" + personId + ", accountType=" + accountType + ", accountNumber="
+				+ accountNumber + ", currency=" + currency + ", initialSAmount=" + initialSAmount + ", currentAmount="
+				+ currentAmount + ", isActive=" + isActive + "]";
+	}
+	
 }

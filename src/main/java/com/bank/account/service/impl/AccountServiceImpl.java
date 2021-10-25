@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 
 import com.bank.account.document.Account;
 import com.bank.account.repository.AccountRepository;
+import com.bank.account.service.AccountService;
 
 @Service
-public class AccountServiceImpl {
+public class AccountServiceImpl implements AccountService{
 	@Autowired
 	private AccountRepository accountRepository;
 
 	
-	public List<Account> getAccount() {
+	public List<Account> getAccounts() {
 		return accountRepository.findAll();
 	}
 
@@ -35,5 +36,9 @@ public class AccountServiceImpl {
 			e.printStackTrace();
 		}
 		return deleted;
+	}
+
+	public List<Account> searchByPersonId(String personId) {
+		return accountRepository.findByPersonId(personId);
 	}
 }

@@ -20,23 +20,28 @@ public class AccountController {
 	@Autowired
 	private AccountService accountService;
 	
-	@GetMapping(value="/api/v1/account")
-	@ResponseBody List<Account> getAccount(){
-		return accountService.getAccount();
+	@GetMapping(value="/api/v1/accounts")
+	@ResponseBody List<Account> getAccounts(){
+		return accountService.getAccounts();
 	}
 
-	@PostMapping(value="/api/v1/account")
+	@PostMapping(value="/api/v1/accounts")
 	@ResponseBody Account savePerson(@RequestBody Account account){
 		return accountService.saveAccount(account);
 	}
 	
-	@PutMapping(value="/api/v1/account")
+	@PutMapping(value="/api/v1/accounts")
 	@ResponseBody Account editPerson(@RequestBody Account account){
 		return accountService.editAccount(account);
 	}
 	
-	@DeleteMapping(value="/api/v1/account/{id}")
+	@DeleteMapping(value="/api/v1/accounts/{id}")
 	@ResponseBody boolean deletedAccount(@PathVariable String id){
 		return accountService.deletedAccount(id);
+	}
+	
+	@GetMapping(value="/api/v1/accounts/{personId}")
+	@ResponseBody List<Account> searchByPersonId(@PathVariable String personId){
+		return accountService.searchByPersonId(personId);
 	}
 }
