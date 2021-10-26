@@ -36,7 +36,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"accountType\": \"Ahorro\",\r\n\t\"accountNumber\": \"54543659863265325202\",\r\n\t\"currency\": \"PEN\",\r\n\t\"initialSAmount\": 0.00,\r\n\t\"currentAmount\": 10.00,\r\n\t\"isActive\": true\r\n}",
+							"raw": "{\r\n        \"personId\": \"61779b0a50901e5057479a59\",\r\n        \"accountType\": \"CUENTA_CORRIENTE\",\r\n        \"accountNumber\": \"9005823699990554785\",\r\n        \"currency\": \"PEN\",\r\n        \"initialSAmount\": 0.0,\r\n        \"currentAmount\": 3333.0,\r\n        \"maxMonthtransactions\": 10,\r\n        \"currentTransactions\": 0,\r\n        \"transactionDay\": null,\r\n        \"maxMonthCredit\": 0.0,\r\n        \"commission\": 0.0,\r\n        \"limited\": true,\r\n        \"active\": false\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
