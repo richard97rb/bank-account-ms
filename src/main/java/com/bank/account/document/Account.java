@@ -1,5 +1,6 @@
 package com.bank.account.document;
 
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,14 +16,13 @@ public class Account {
 	private float initialSAmount;
 	private float currentAmount;
 	private boolean isActive;
-		
+	
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 	public String getPersonId() {
 		return personId;
 	}
