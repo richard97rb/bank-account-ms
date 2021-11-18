@@ -17,6 +17,7 @@ import com.bank.account.service.AccountService;
 
 @RestController
 public class AccountController {
+	
 	@Autowired
 	private AccountService accountService;
 	
